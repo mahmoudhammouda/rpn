@@ -11,6 +11,15 @@ Incorporer ILogger dans le projet et créer un adaptateur pour s'adapter à une 
 * Ajouter un répertoire config contenant quatre sous-répertoires (Dev, Rec, Med, Prd), chacun avec son propre appsettings_Env.json correspondant à son environnement.
 Rendre les paramètres de configuration modifiables, avec des valeurs ajoutées par les agents de déploiement.
 
+# Configuration des Mappings AutoMapper :
+Pour chaque DTO, configurer un mapping correspondant vers le modèle associé. Assurer que les règles de validation des modèles sont respectées, car AutoMapper peut contourner la validation standard.
+
+# Ajout de la Fonctionnalité Undo pour les Opérandes
+Actuellement, la fonctionnalité d'annulation (Undo) est implémentée uniquement pour les opérateurs. Il est nécessaire d'étendre cette fonctionnalité pour permettre également l'annulation des opérandes.
+
+# Initialisation d'un Calculateur en Mode Différé
+Introduire la possibilité d'initialiser le calculateur en mode différé. Cette option sera particulièrement utile pour l'interprétation d'expressions complexes ou pour des calculs nécessitant une évaluation ultérieure.
+
 # Rendre RpnCalculator Indépendant de la Mise en Cache :
 Implémenter IStackCache et IStackHistoryCache pour encapsuler les interactions avec le cache et ainsi rendre RpnCalculator indépendant de toute logique de mise en cache spécifique.
 
