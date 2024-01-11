@@ -1,6 +1,7 @@
-# rpn
-Reverse Polish Notation Calculator with net core 6 and angular
+# rpn 
 => cette page est en cours de modification.
+Reverse Polish Notation Calculator with net core 6 and angular
+
 
 # Objectif :
 * Réalisation d’une calculatrice RPN (notation polonaise inversée) en mode client/serveur
