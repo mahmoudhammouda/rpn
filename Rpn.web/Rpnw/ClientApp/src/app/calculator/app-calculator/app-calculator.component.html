@@ -1,0 +1,103 @@
+<!--
+Christine Gelotte
+Simple RPN Calculator
+-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<body>
+  <div class="container text-center">
+    <div id="banner">
+      <h1>Reverse Polish Notation Calculator</h1>
+    </div>
+    <div class="row">
+      <div class="col-xs col-md">
+        <div id="textbox"></div>
+      </div>
+      <div class="col-xs col-md">
+        <table class="table block-center" id="table">
+          <tr>
+            <td colspan="4">
+              <input id="stackdisplay" [value]="stackDisplay" placeholder="here the stack will be displayed"/>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="4">
+              <div id="display">{{currentNumber}}</div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <button id="push" (click)="push()">Entr</button>
+            </td>
+            <td>
+              <button id="clear" (click)="clear()">C</button>
+            </td>
+            <td colspan="2">
+              <button id="stack">Undo Operator</button>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <button id="num7" class="num" (click)="getNumber('7')" value="7">7</button>
+            </td>
+            <td>
+              <button id="num8" class="num" (click)="getNumber('8')" value="8">8</button>
+            </td>
+            <td>
+              <button id="num9" class="num" (click)="getNumber('9')" value="9">9</button>
+            </td>
+            <td>
+              <button id="plus" (click)="getOperation('+')" class="op" value="+">+</button>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <button id="num4" class="num" (click)="getNumber('4')" value="4">4</button>
+            </td>
+            <td>
+              <button id="num5" class="num" (click)="getNumber('5')" value="5">5</button>
+            </td>
+            <td>
+              <button id="num6" class="num" (click)="getNumber('6')" value="6">6</button>
+            </td>
+            <td>
+              <button id="minus" (click)="getOperation('-')" class="op" value="-">-</button>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <button id="num1" class="num" (click)="getNumber('1')" value="1">1</button>
+            </td>
+            <td>
+              <button id="num2" class="num" (click)="getNumber('2')" value="2">2</button>
+            </td>
+            <td>
+              <button id="num3" class="num" (click)="getNumber('3')" value="3">3</button>
+            </td>
+            <td>
+              <button id="mult" (click)="getOperation('*')" class="op" value="*">*</button>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <button id="num0" class="num">0</button>
+            </td>
+            <td>
+              <button id="dot">.</button>
+            </td>
+            <td>
+              <button id="signflip" (click)="getOperation('*')" class="op" value="*">Sqrt</button>
+            </td>
+            <td>
+              <button id="div" (click)="getOperation('/')" class="op" value="/">/</button>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="col-xs col-md">
+      </div>
+    </div>
+    <div id="footer">
+    </div>
+  </div>
+</body>

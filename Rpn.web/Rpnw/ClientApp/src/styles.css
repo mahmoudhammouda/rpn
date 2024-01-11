@@ -1,0 +1,45 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~ag-grid-community/styles/ag-grid.css';
+@import '~ag-grid-community/styles/ag-theme-alpine.css';
+@import "~flag-icons/css/flag-icons.min.css";
+/* Provide sufficient contrast against white background */
+a {
+  color: #0366d6;
+}
+
+code {
+  color: #e01a76;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.skill-tag {
+  display: inline-block;
+  background-color: #e8e8e8;
+  border-radius: 4px;
+  padding: 2px 6px;
+  margin: 2px;
+  font-size: 0.8em;
+  border-radius: 9999px;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  line-height: 1.5rem;
+  font-size: .75rem;
+  --tw-space-x-reverse: 0;
+  margin-left: calc(0.25rem*(1 - var(--tw-space-x-reverse)));
+  margin-right: calc(0.25rem*var(--tw-space-x-reverse));
+  display: inline-flex;
+  font-size: 12px;
+}
+
+.skill-tags-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: -5px;
+  font-size: 12px;
+}
+

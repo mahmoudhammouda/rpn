@@ -1,0 +1,53 @@
+body {
+    background-color: #f4efef;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+#table {
+    background-color: black;
+    padding: 5px;
+    height: auto;
+    width: 100%;
+}
+
+#banner {
+    border: solid 5px;
+    margin-bottom: 50px;
+}
+
+#footer {
+    margin-top: 10px;
+}
+
+
+#stackdisplay {
+    background-color: #75b4e7;
+    text-align: lfet;
+    height: 30px;
+    padding: 30px;
+    width: 100%;
+    font: bold;
+
+}
+
+#display {
+    background-color: white;
+    text-align: right;
+    height: 30px;
+    margin: 10px;
+}
+
+button {
+    background-color: #ffa9a9;
+    height: 100%;
+    width: 100%;
+}
+
+.num {
+    color: blue;
+}
+
+#textbox {
+    width: 100%
+}
