@@ -42,7 +42,7 @@ apportées au projet pour constituer une première backlog.
 ![image](https://github.com/mahmoudhammouda/rpn/assets/50197626/e91025cc-bd1e-4366-9347-5a82d475a700)
 
 # Progression :
-Voici une description détaillée des étapes que vous avez suivies pour créer votre calculatrice :
+Voici une description détaillée des étapes  suivies pour créer vcalculatrice :
 
 * Développement d'une Librairie de Calculatrice :
 Conception et tests d'une bibliothèque dédiée à la calculatrice dans un projet Visual Studio séparé.
