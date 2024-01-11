@@ -1,7 +1,29 @@
-# rpn
+# rpn 
+=> cette page est en cours de modification.
 Reverse Polish Notation Calculator with net core 6 and angular
 
-=> cette page est en cours de modification.
+
+# Objectif :
+* Réalisation d’une calculatrice RPN (notation polonaise inversée) en mode client/serveur
+
+# Langages :
+ Backend : API REST, C#, NET
+ Frontend : Swagger
+
+# Fonctionnalités demandées :
+* Ajout d’un élément dans une pile
+*  Récupération de la pile
+* Nettoyage de la pile
+* Opération +
+* Opération -
+* Opération *
+* Opération /
+
+# Livrables: (En cours)
+* Code : Livraison du code sur un repo github à nous communiquer
+* ToDo : Fichier « todo.md » listant les améliorations et lesraccourcis pris à cause du temps imparti.
+* Roadmap : Fichier « roadmap.md » listant quelques fonctionnalités qui pourraient être
+apportées au projet pour constituer une première backlog.
 
 #  Le visual angular RPN (en cours)
 
