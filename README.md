@@ -1,5 +1,4 @@
 # Rpn API 
-=> cette page est en cours de modification.
 Reverse Polish Notation Calculator with net core 6 and angular
 
 
