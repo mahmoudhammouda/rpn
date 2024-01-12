@@ -1,5 +1,11 @@
 TODO: Rest a faire sur le cours terme :
 
+# Gerer les calculs avec error/exception
+* Cas de la division par 0
+* Si une operation genere une error, il faut rollbacker l'etat de la stack, il ne faut pas la modifier
+* Envoyer une error 400 au client
+* Cela doit etre gerer de façon generique : peut etre au niveau de la commande car on ne doit pas garder la commande dans l'historique utilisé pour le Undo
+
 # Paquetiser la Calculatrice en un NuGet Partageable :
 La calculatrice, initialement développée comme une bibliothèque pour une application console, devrait être transformée en un package NuGet pour faciliter sa réutilisation dans différents types d'hôtes (API, WCF, console, etc.). Créer un package NuGet testable et injectable, incluant le code et les tests, est une pratique recommandée.
 
