@@ -38,7 +38,7 @@ apportées au projet pour constituer une première backlog.
 
 #  Les tests d'acceptances
 
-![image](https://github.com/mahmoudhammouda/rpn/assets/50197626/e91025cc-bd1e-4366-9347-5a82d475a700)
+![image](https://github.com/mahmoudhammouda/rpn/assets/50197626/80b9a2d7-fff5-4e82-8659-c74fd25912e1)
 
 # Progression :
 Voici une description détaillée des étapes  suivies pour créer vcalculatrice :
@@ -81,5 +81,8 @@ Réalisation de tests d'intégration depuis un projet d'acceptance externe, avec
 
 * Refactorisation et Nettoyage du Code :
 Lancement de la phase de refactorisation et de nettoyage du code pour améliorer la maintenabilité et la clarté.
+
+* Detection de problèmes et Hotfix
+lancer des operations avec des valeurs limites et voir ce que cela donne. (division par zero au niveau calculator ok, et au niveau api ko => hotfix fait)
 
 
