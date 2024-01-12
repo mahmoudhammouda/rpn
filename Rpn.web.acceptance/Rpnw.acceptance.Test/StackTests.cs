@@ -116,6 +116,30 @@ namespace Rpnw.acceptance.Test
 
         }
 
-       
+        [Test]
+        public async Task DivisionByZero_ShouldReturnBadRequest()
+        {
+            // Arrange
+            var createResponse = await _client.PostAsync(_baseUri, null);
+            createResponse.EnsureSuccessStatusCode();
+            var stackId = JsonConvert.DeserializeObject<StackDto>(await createResponse.Content.ReadAsStringAsync()).Id;
+            await _client.PostAsync($"{_baseUri}/{stackId}/operands", JsonContent.Create(new OperandDto { Value = 10 }));
+            await _client.PostAsync($"{_baseUri}/{stackId}/operands", JsonContent.Create(new OperandDto { Value = 0 }));
+
+            // Act
+            var divisionResponse = await _client.PostAsync($"{_baseUri}/{stackId}/operators", JsonContent.Create(new AddOperatorDto { OperatorId = 4 })); // Supposons que 4 est l'ID de l'opérateur de division
+
+            // Assert
+            Assert.AreEqual(HttpStatusCode.BadRequest, divisionResponse.StatusCode);
+
+            // Ici on doit verifier que la stack n'a pas change car il y a eu une erreur
+            var getResultResponse = await _client.GetAsync($"{_baseUri}/{stackId}");
+            getResultResponse.EnsureSuccessStatusCode();
+            var stackAfterDivision = JsonConvert.DeserializeObject<StackDto>(await getResultResponse.Content.ReadAsStringAsync());
+            var currentValues = stackAfterDivision.Elements.Select(e => e.Value).ToArray();
+            Assert.AreEqual(new string[] { "0", "10" }, currentValues, "La pile doit rester inchangée après une division par zéro.");
+        }
+
+
     }
 }
