@@ -20,7 +20,13 @@ namespace Rpnw.Domain.Impl.Rpn.Operators
                 throw new InvalidOperationException("Nombre d'operands insuffisant pour l'operation Div.");
             }
 
-            var right = stack.Pop() as IRpnOperand;
+            var right = stack.Peek() as IRpnOperand;
+            if (right !=null && right.Value == 0)
+            {
+                throw new DivideByZeroException("On ne peut pas Diviser par Zero.");
+            }
+
+            right = stack.Pop() as IRpnOperand;
             var left = stack.Pop() as IRpnOperand;
 
             if (right == null || left == null)
@@ -28,11 +34,7 @@ namespace Rpnw.Domain.Impl.Rpn.Operators
                 throw new InvalidOperationException("Nombre d'operands insuffisant pour l'operation Div.");
             }
 
-            if (right.Value == 0)
-            {
-                throw new DivideByZeroException("On ne peut pas Diviser par Zero.");
-            }
-
+            
             _result = new Operand(left.Value / right.Value);
             stack.Push(_result);
         }

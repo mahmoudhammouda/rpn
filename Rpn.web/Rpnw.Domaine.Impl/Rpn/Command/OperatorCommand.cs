@@ -28,6 +28,7 @@ namespace Rpnw.Domain.Impl.Rpn.Command
             SaveCurrentState();
 
             // Exécutez l'opération
+
             _operator.Operate(_stack);
 
             // Enregistrez le résultat de l'opération

@@ -186,6 +186,10 @@ namespace Rpnw.Presentation.Rest.Services.Services
             {
                 return NotFound(ex.Message);
             }
+            catch(DivideByZeroException ex) 
+            {
+                return StatusCode(400, ex.Message);
+            }
             catch (Exception ex)
             {
 
