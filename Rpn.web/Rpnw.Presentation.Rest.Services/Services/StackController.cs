@@ -34,6 +34,7 @@ namespace Rpnw.Presentation.Rest.Services.Services
 
         [HttpPost]
         [SwaggerResponse(StatusCodes.Status200OK, Type = typeof(StackDto))]
+        [SwaggerOperation(Summary = "Creer une nouvelle stack", Description = "Creer une nouvelle stack")]
         public IActionResult CreateStack()
         {
             try
@@ -56,6 +57,7 @@ namespace Rpnw.Presentation.Rest.Services.Services
 
         [HttpDelete("{stackId}")]
         [SwaggerResponse(StatusCodes.Status200OK)]
+        [SwaggerOperation(Summary = "Supprimer une stack par son id", Description = "Supprimer une stack par son id")]
         public IActionResult DeleteStack(Guid stackId)
         {
             try
@@ -76,6 +78,7 @@ namespace Rpnw.Presentation.Rest.Services.Services
         }
 
         [HttpDelete("{stackId}/clear")]
+        [SwaggerOperation(Summary = "Nettoyer une stack par id", Description = "Nettoyer une stack par id")]
         public IActionResult ClearStack(Guid stackId)
         {
             try
@@ -98,6 +101,7 @@ namespace Rpnw.Presentation.Rest.Services.Services
 
         [HttpGet("{stackId}")]
         [SwaggerResponse(StatusCodes.Status200OK, Type = typeof(StackDto))]
+        [SwaggerOperation(Summary = "Recuperer une stack par son id", Description = "Recuperer une stack par son id")]
         public IActionResult GetStack(Guid stackId)
         {
             try
@@ -125,6 +129,7 @@ namespace Rpnw.Presentation.Rest.Services.Services
 
         [HttpGet]
         [SwaggerResponse(StatusCodes.Status200OK, Type = typeof(IEnumerable<StackDto>))]
+        [SwaggerOperation(Summary = "Recuperer toutes les stacks", Description = "Recuperer toutes les stacks")]
         public IActionResult GetAllStacks()
         {
             var stacks = _stackService.GetAllStacks();
@@ -138,6 +143,7 @@ namespace Rpnw.Presentation.Rest.Services.Services
 
         [HttpPost("{stackId}/operands")]
         [SwaggerResponse(StatusCodes.Status201Created, Type = typeof(StackDto))]
+        [SwaggerOperation(Summary = "Ajouter une operande a la stack id", Description = "Ajouter une operande a la stack id")]
         public IActionResult AddOperand(Guid stackId, [FromBody] OperandDto operandDto)
         {
             try
@@ -167,6 +173,7 @@ namespace Rpnw.Presentation.Rest.Services.Services
 
         [HttpPost("{stackId}/operators")]
         [SwaggerResponse(StatusCodes.Status201Created, Type = typeof(StackDto))]
+        [SwaggerOperation(Summary = "Ajouter un operation a la stack id", Description = "Ajouter un operation a la stack id")]
         public IActionResult AddOperator(Guid stackId, [FromBody] AddOperatorDto addOperatorDto)
         {
             try
@@ -199,6 +206,7 @@ namespace Rpnw.Presentation.Rest.Services.Services
 
         [HttpPost("{stackId}/operators/undo")]
         [SwaggerResponse(StatusCodes.Status200OK, Type = typeof(StackDto))]
+        [SwaggerOperation(Summary = "Annuler une operation a la stack id", Description = "Annuler une operation a la stack id")]
         public IActionResult UndoOperator(Guid stackId)
         {
             try

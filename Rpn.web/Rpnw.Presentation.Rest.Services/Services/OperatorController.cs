@@ -28,6 +28,7 @@ namespace Rpnw.Presentation.Rest.Services.Services
 
         [HttpGet]
         [SwaggerResponse(StatusCodes.Status200OK, Type = typeof(IEnumerable<OperatorDto>))]
+        [SwaggerOperation(Summary = "Récupère une liste d'operator", Description = "Récupère une liste d'operator")]
         public IActionResult GetAllOperators()
         {
             try
@@ -50,6 +51,7 @@ namespace Rpnw.Presentation.Rest.Services.Services
 
         [HttpGet("{id}")]
         [SwaggerResponse(StatusCodes.Status200OK, Type = typeof(OperatorDto))]
+        [SwaggerOperation(Summary = "Récupèrer un operator par son id", Description = "Récupèrer un operator par son id")]
         public IActionResult GetOperator(int id)
         {
             try
