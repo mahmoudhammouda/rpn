@@ -14,6 +14,27 @@ Rendre les paramètres de configuration modifiables, avec des valeurs ajoutées 
 # Configuration des Mappings AutoMapper :
 Pour chaque DTO, configurer un mapping correspondant vers le modèle associé. Assurer que les règles de validation des modèles sont respectées, car AutoMapper peut contourner la validation standard.
 
+# Refactorisation du Fichier Program
+  Procéder à une refactorisation du fichier `Program.cs` en le segmentant en méthodes plus simples et concises, afin de faciliter la compréhension.
+  * Grouper les fonctionnalités swagger ensemble dans une classe partial startup.swagger.cs
+  * Grouper les injections dans une méthode qui centralise l'injection dans une classe partial startup.injection.cs
+  * Grouper les fonconctionnalité MVC ensemble dans un startup.Mvc.cs
+
+# Amélioration de la Gestion des Exceptions
+  Revoir le mecanisme mis en place 
+  * Ajouter des exceptions specifique
+  * Gerer la capture des exceptions non traités au niveau du domaine et les envoyer sur un kibana
+  * forwarder vers une page d'error
+
+# Standardisation des Messages de Retour
+  Uniformisation des Messages pour les Exceptions et la Pagination** :
+   * Normaliser les messages de retour, particulièrement pour les exceptions et les réponses paginées, afin d'assurer une communication claire et uniforme avec les clients de l'API.
+
+# Ajout de Middleware
+* Middleware pour l identification et le rejet des requêtes
+* Middleware pour gérer L'audit des requetes et des réponses
+* Middleware pour gérer les cancel de requete
+
 # Ajout de la Fonctionnalité Undo pour les Opérandes
 Actuellement, la fonctionnalité d'annulation (Undo) est implémentée uniquement pour les opérateurs. Il est nécessaire d'étendre cette fonctionnalité pour permettre également l'annulation des opérandes.
 
